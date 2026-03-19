@@ -114,11 +114,10 @@ Claude will ask for your feedback: "How does the hero section feel?" Tell it wha
 When you're happy with the page, Claude will ask if you want to deploy it.
 
 If you say yes:
-- Claude runs the deploy command
+- Claude runs the deploy script (bundled — **no Vercel account needed**)
 - You get a **live URL** like `https://your-site-abc123.vercel.app`
 - You can share this URL with anyone — it works on any device
-
-**First time deploying?** Claude will walk you through creating a free Vercel account.
+- You also get a **claim URL** if you want to keep the site permanently (free Vercel account)
 
 ### Step 9: You're done!
 
@@ -136,13 +135,13 @@ You now have:
 | **Claude Code** | Runs this project | `npm install -g @anthropic-ai/claude-code` |
 | **Node.js 18+** | Builds the landing page | [nodejs.org](https://nodejs.org) — download LTS |
 | **Git** | Downloads this project | Usually pre-installed. [git-scm.com](https://git-scm.com) if not |
-| **Vercel account** (optional) | Deploys to a live URL | Free at [vercel.com](https://vercel.com) |
+| **Vercel account** (optional) | Only needed to claim/keep deployments permanently | Free at [vercel.com](https://vercel.com) |
 
 ---
 
 ## Bundled Skills
 
-This project comes with **6 professional skills pre-installed** in `.claude/skills/`. They load automatically when Claude opens the project — you don't need to install anything extra.
+This project comes with **9 professional skills pre-installed** in `.claude/skills/`. They load automatically when Claude opens the project — you don't need to install anything extra.
 
 | Skill | What It Does |
 |-------|-------------|
@@ -150,6 +149,9 @@ This project comes with **6 professional skills pre-installed** in `.claude/skil
 | `shadcn-ui` | Component library guide for polished UI with accessibility built in |
 | `humanizer` | Removes AI writing patterns so page copy sounds human |
 | `vercel-react-best-practices` | 62 performance rules for faster page load times |
+| `vercel-deploy` | **Deploy to Vercel instantly — no account needed.** Auto-detects framework and gives you a live URL |
+| `building-components` | Guide for building modern, accessible UI components |
+| `web-design-guidelines` | Review your page against Vercel's Web Interface Guidelines |
 | `playwright-cli` | Browser automation so Claude can screenshot and check the design |
 | `seo-audit` | SEO analysis for meta tags, headings, and search visibility |
 
@@ -177,7 +179,7 @@ Check the [Claude Code skills documentation](https://docs.anthropic.com/en/docs/
 **No.** Claude handles all the coding. You just answer questions about your business and give feedback on the design.
 
 ### Is this free?
-**Mostly.** You need a Claude Code subscription (from Anthropic). Node.js, Git, and Vercel's free tier are all free.
+**Mostly.** You need a Claude Code subscription (from Anthropic). Node.js, Git, and deployment are all free. You don't even need a Vercel account — the bundled deploy script handles everything.
 
 ### Can I edit the page after Claude builds it?
 **Yes.** The source code lives in the `site/` folder. It's standard Next.js + React code. You (or any developer) can edit it anytime.

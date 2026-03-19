@@ -1,7 +1,7 @@
 # Skill Reference
 
 ## How Skills Work
-Skills are markdown files that Claude Code reads automatically. This project bundles 6 core skills in `.claude/skills/` — they load automatically when Claude opens the project. Optional skills must be installed by the user at `~/.claude/skills/` or `~/.agents/skills/`.
+Skills are markdown files that Claude Code reads automatically. This project bundles **9 core skills** in `.claude/skills/` — they load automatically when Claude opens the project. Optional skills must be installed by the user at `~/.claude/skills/` or `~/.agents/skills/`.
 
 ---
 
@@ -13,6 +13,9 @@ Skills are markdown files that Claude Code reads automatically. This project bun
 | `shadcn-ui` | `.claude/skills/shadcn-ui/` | React component library with Tailwind CSS. Copy-paste accessible components. |
 | `humanizer` | `.claude/skills/humanizer/` | Removes AI writing patterns from text. 24+ pattern detection. |
 | `vercel-react-best-practices` | `.claude/skills/vercel-react-best-practices/` | 62 performance rules across 8 categories for React/Next.js. Includes full AGENTS.md + 64 rule files. |
+| `vercel-deploy` | `.claude/skills/vercel-deploy/` | **Deploy to Vercel sandbox** — no account or CLI needed. Includes `deploy.sh` script that auto-detects framework, packages, and deploys. MIT licensed by Vercel. |
+| `building-components` | `.claude/skills/building-components/` | Guide for building modern, accessible, composable UI components. Includes 15 reference docs covering accessibility, composition, polymorphism, design tokens, and more. |
+| `web-design-guidelines` | `.claude/skills/web-design-guidelines/` | Review UI code against Vercel's Web Interface Guidelines. Fetches latest rules and audits compliance. |
 | `playwright-cli` | `.claude/skills/playwright-cli/` | Browser automation for screenshots and visual QA. Includes 7 reference docs. |
 | `seo-audit` | `.claude/skills/seo-audit/` | Technical SEO analysis, meta tags, heading structure. |
 
@@ -36,6 +39,39 @@ If an optional skill is missing, use the fallback and move on. Don't ask the use
 ---
 
 ## Invocation Examples
+
+### vercel-deploy (bundled) — DEPLOY WITHOUT ACCOUNT
+The primary deployment method. No Vercel account, CLI, or login needed.
+
+```bash
+# Deploy the site directory
+bash .claude/skills/vercel-deploy/scripts/deploy.sh site
+```
+
+The script:
+1. Auto-detects the framework from `package.json` (Next.js, Gatsby, Remix, Astro, etc.)
+2. Creates a tarball (excludes node_modules, .git, .next, .env)
+3. Uploads to Vercel's deploy endpoint
+4. Polls until build completes (up to 5 minutes)
+5. Returns JSON with `previewUrl` and `claimUrl`
+
+**Output:** Share `previewUrl` with user. Mention `claimUrl` as optional for permanent hosting.
+
+**Always run `npm run build` first** to catch errors before deploying.
+
+If the Vercel CLI is installed and authenticated, you can also use: `cd site && npx vercel --yes`
+
+### building-components (bundled)
+Automatically loaded. Provides guidance when building UI components during Phase 4:
+- Component taxonomy (primitives, components, blocks, templates)
+- Accessibility patterns (ARIA, keyboard navigation, focus management)
+- Composition patterns (slots, render props, controlled/uncontrolled state)
+- Design token systems and theming
+- Data attributes for styling and state
+
+### web-design-guidelines (bundled)
+Use during Phase 5 (QA) to review the built page against Vercel's Web Interface Guidelines.
+Fetches the latest guidelines from GitHub and checks UI code for compliance.
 
 ### humanizer (bundled)
 The humanizer skill loads automatically. To use it:

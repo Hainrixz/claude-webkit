@@ -16,7 +16,7 @@ If unsure, ask: "Would you prefer English or Spanish? / Prefieres ingles o espan
 
 ## Skills
 
-**6 core skills are bundled** in `.claude/skills/` and load automatically — no installation needed:
+**9 core skills are bundled** in `.claude/skills/` and load automatically — no installation needed:
 
 | Bundled Skill | Purpose |
 |---------------|---------|
@@ -24,6 +24,9 @@ If unsure, ask: "Would you prefer English or Spanish? / Prefieres ingles o espan
 | `shadcn-ui` | Component library (React + Tailwind) with accessibility patterns |
 | `humanizer` | Remove AI writing patterns from ALL copy (24+ pattern detection) |
 | `vercel-react-best-practices` | Next.js performance optimization (62 rules) |
+| `vercel-deploy` | **Deploy to Vercel sandbox** — no account or CLI needed. Uses `deploy.sh` script. |
+| `building-components` | Guide for building modern, accessible, composable UI components |
+| `web-design-guidelines` | Review UI against Vercel's Web Interface Guidelines |
 | `playwright-cli` | Visual QA via browser screenshots |
 | `seo-audit` | SEO checks — meta tags, headings, alt text, structured data |
 
@@ -184,13 +187,31 @@ Review the built page against SEO best practices — check title tags, meta desc
 ### Phase 6: Deploy (Optional)
 Ask the user if they want to deploy to a live preview URL.
 
-If yes:
+If yes, first verify the build works:
+```bash
+cd site && npm run build
+```
+
+Then deploy using the **bundled vercel-deploy skill** (no Vercel account needed):
+```bash
+bash .claude/skills/vercel-deploy/scripts/deploy.sh site
+```
+
+This script:
+1. Auto-detects the framework (Next.js)
+2. Packages the project (excludes node_modules, .git, .env)
+3. Deploys to Vercel's sandbox endpoint
+4. Polls until the build is complete
+5. Returns a **preview URL** (like `https://site-xxxxx.vercel.app`) and a **claim URL**
+
+Share both with the user:
+- **Preview URL:** "Your page is live! Here's the link: [previewUrl]"
+- **Claim URL (optional):** "If you want to keep this permanently, you can claim it at [claimUrl] with a free Vercel account."
+
+**Alternative (if user has Vercel CLI installed):**
 ```bash
 cd site && npx vercel --yes
 ```
-If auth fails, guide them: "Run `npx vercel login` and follow the browser prompt."
-
-Share the deployed URL. Mention it stays live as long as their Vercel account is active.
 
 See `docs/deployment-guide.md` for troubleshooting.
 

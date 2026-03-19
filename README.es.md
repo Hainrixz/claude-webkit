@@ -112,11 +112,10 @@ Claude te va a pedir feedback: "Que te parece la seccion principal?" Dile que te
 Cuando estes contento con la pagina, Claude te va a preguntar si quieres publicarla.
 
 Si dices que si:
-- Claude corre el comando de deploy
+- Claude corre el script de deploy (incluido — **no necesitas cuenta de Vercel**)
 - Te da una **URL en vivo** como `https://tu-sitio-abc123.vercel.app`
 - Puedes compartir esta URL con quien quieras — funciona en cualquier dispositivo
-
-**Primera vez publicando?** Claude te guia paso a paso para crear una cuenta gratuita en Vercel.
+- Tambien te da una **URL de reclamo** si quieres conservar el sitio permanentemente (cuenta gratis de Vercel)
 
 ### Paso 9: Listo!
 
@@ -140,7 +139,7 @@ Ahora tienes:
 
 ## Skills Incluidos
 
-Este proyecto viene con **6 skills profesionales pre-instalados** en `.claude/skills/`. Se cargan automaticamente cuando Claude abre el proyecto — no necesitas instalar nada extra.
+Este proyecto viene con **9 skills profesionales pre-instalados** en `.claude/skills/`. Se cargan automaticamente cuando Claude abre el proyecto — no necesitas instalar nada extra.
 
 | Skill | Que hace |
 |-------|---------|
@@ -148,6 +147,9 @@ Este proyecto viene con **6 skills profesionales pre-instalados** en `.claude/sk
 | `shadcn-ui` | Guia de componentes para UI pulida con accesibilidad incluida |
 | `humanizer` | Quita patrones de escritura IA para que el texto suene humano |
 | `vercel-react-best-practices` | 62 reglas de rendimiento para tiempos de carga mas rapidos |
+| `vercel-deploy` | **Publica en Vercel al instante — sin necesidad de cuenta.** Detecta el framework y te da una URL en vivo |
+| `building-components` | Guia para construir componentes de UI modernos y accesibles |
+| `web-design-guidelines` | Revisa tu pagina contra las guias de Web Interface de Vercel |
 | `playwright-cli` | Automatizacion de navegador para que Claude tome capturas y revise el diseno |
 | `seo-audit` | Analisis SEO para meta tags, encabezados y visibilidad en buscadores |
 
@@ -175,7 +177,7 @@ Revisa la [documentacion de skills de Claude Code](https://docs.anthropic.com/en
 **No.** Claude se encarga de todo el codigo. Tu solo respondes preguntas sobre tu negocio y das feedback sobre el diseno.
 
 ### Es gratis?
-**Casi todo.** Necesitas una suscripcion a Claude Code (de Anthropic). Node.js, Git y el plan gratuito de Vercel son gratis.
+**Casi todo.** Necesitas una suscripcion a Claude Code (de Anthropic). Node.js, Git y el deploy son todos gratis. Ni siquiera necesitas cuenta de Vercel — el script de deploy incluido se encarga de todo.
 
 ### Puedo editar la pagina despues de que Claude la construya?
 **Si.** El codigo fuente esta en la carpeta `site/`. Es codigo estandar de Next.js + React. Tu (o cualquier desarrollador) puede editarlo cuando quiera.
