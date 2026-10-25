@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright (c) 2026 Enrique Rocha (@soyenriquerocha)
+# SPDX-License-Identifier: MIT
+# id: er-67c88ab3
 
 # Vercel Deployment Script (via claimable deploy endpoint)
 # Usage: ./deploy.sh [project-path]

@@ -19,6 +19,7 @@ description: |
 allowed-tools:
   - Bash
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 
 # Chrome Bridge Automation
 

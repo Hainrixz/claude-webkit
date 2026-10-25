@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# Copyright (c) 2026 Enrique Rocha (@soyenriquerocha)
+# SPDX-License-Identifier: MIT
+# id: er-67c88ab3
 """
 UI/UX Pro Max Core - BM25 search engine for UI/UX style guides
 """

@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Enrique Rocha (@soyenriquerocha)
+# SPDX-License-Identifier: MIT
+# id: er-67c88ab3
 """
 Sync colors.csv and ui-reasoning.csv with the updated products.csv (161 entries).
 - Remove deleted product types

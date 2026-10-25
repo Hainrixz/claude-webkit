@@ -6,6 +6,7 @@ metadata:
   author: vercel
   version: "1.0.0"
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 
 # Vercel React Best Practices
 

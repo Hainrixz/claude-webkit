@@ -3,6 +3,7 @@ name: review-animations
 description: Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.
 disable-model-invocation: true
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 
 # Reviewing Animations
 

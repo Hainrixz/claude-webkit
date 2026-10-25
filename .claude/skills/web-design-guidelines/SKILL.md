@@ -6,6 +6,7 @@ metadata:
   version: "1.0.0"
   argument-hint: <file-or-pattern>
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 
 # Web Interface Guidelines
 

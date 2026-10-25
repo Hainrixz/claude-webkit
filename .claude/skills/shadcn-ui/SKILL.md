@@ -7,6 +7,7 @@ progressive_disclosure:
     when_to_use: "When working with shadcn-ui or related functionality."
     quick_start: "1. Review the core concepts below. 2. Apply patterns to your use case. 3. Follow best practices for implementation."
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 # shadcn/ui - Component Library
 
 ## Summary

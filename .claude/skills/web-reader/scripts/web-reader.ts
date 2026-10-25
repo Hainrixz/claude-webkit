@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Enrique Rocha (@soyenriquerocha)
+// SPDX-License-Identifier: MIT
+// id: er-67c88ab3
 import ZAI from 'z-ai-web-dev-sdk';
 
 interface PageReaderFunctionResult {

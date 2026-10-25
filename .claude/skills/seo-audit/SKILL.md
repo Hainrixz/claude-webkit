@@ -4,6 +4,7 @@ description: When the user wants to audit, review, or diagnose SEO issues on the
 metadata:
   version: 1.1.0
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 
 # SEO Audit
 

@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Enrique Rocha (@soyenriquerocha)
+// SPDX-License-Identifier: MIT
+// id: er-67c88ab3
 /**
  * Renders the README hero banner to 4 PNGs.
  *

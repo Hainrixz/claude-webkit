@@ -2,6 +2,7 @@
 name: vercel-deploy
 description: Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
 ---
+<!-- Copyright (c) 2026 Enrique Rocha (@soyenriquerocha) · tododeia.com · id er-67c88ab3 -->
 
 > **Note:** In `claude-webkit` this skill is the primary deployment path. CLAUDE.md Phase 6 calls
 > `bash .claude/skills/vercel-deploy/scripts/deploy.sh site` directly.
