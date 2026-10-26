@@ -45,3 +45,5 @@ prototypes/
 # Python bytecode from bundled skills
 __pycache__/
 *.pyc
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
